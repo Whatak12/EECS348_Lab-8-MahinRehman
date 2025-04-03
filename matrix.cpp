@@ -8,29 +8,29 @@ Other sources: ChatGpt
 Author: Mahin Rehman
 Creation date: 04/02/2025
 */
-// include the header file for the Matrix class
+//include the header file for the Matrix class
 #include "matrix.hpp"
 #include <iomanip>
 
-// use the standard namespace
+//use the standard namespace
 using namespace std;
 
-// constructor that initializes an empty NxN matrix
+//constructor that initializes an empty NxN matrix
 Matrix::Matrix(size_t N) {
     // set the matrix size
     size = N;
 
-    // resize the matrix to N rows
+    //resize the matrix to N rows
     data.resize(size);
 
-    // loop through each row
+    //loop through each row
     for (size_t i = 0; i < size; ++i) {
         // resize each row to have N columns
         data[i].resize(size);
     }
 }
 
-// constructor that reads matrix data from a file stream
+//constructor that reads matrix data from a file stream
 Matrix::Matrix(ifstream &input) {
     // read the matrix size from the file
     if (size == 0) {
@@ -38,7 +38,7 @@ Matrix::Matrix(ifstream &input) {
     }
     
 
-    // resize the matrix to N rows
+    //resize the matrix to N rows
     data.resize(size);
 
     // loop through each row
