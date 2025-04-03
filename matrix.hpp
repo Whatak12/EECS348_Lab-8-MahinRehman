@@ -80,6 +80,15 @@ public:
     // overload * operator for matrix multiplication
     Matrix operator*(const Matrix& other) const;
 
+    // get the sum of the major diagonal
+    int sum_diagonal_major() const;
+
+    // get the sum of the minor diagonal
+    int sum_diagonal_minor() const;
+
+    // alias for swapping columns (for test compatibility)
+    void swap_cols(size_t col1, size_t col2);
+
 };
 
 #endif

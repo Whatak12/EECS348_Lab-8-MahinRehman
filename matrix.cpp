@@ -225,3 +225,39 @@ Matrix Matrix::operator*(const Matrix& other) const {
     // return the result matrix
     return result;
 }
+
+// get the sum of the major diagonal
+int Matrix::sum_diagonal_major() const {
+    // initialize sum
+    int sum = 0;
+
+    // loop through major diagonal
+    for (size_t i = 0; i < size; ++i) {
+        // add diagonal element
+        sum += data[i][i];
+    }
+
+    // return total
+    return sum;
+}
+
+// get the sum of the minor diagonal
+int Matrix::sum_diagonal_minor() const {
+    // initialize sum
+    int sum = 0;
+
+    // loop through minor diagonal
+    for (size_t i = 0; i < size; ++i) {
+        // add diagonal element from top-right to bottom-left
+        sum += data[i][size - 1 - i];
+    }
+
+    // return total
+    return sum;
+}
+
+// alias for swap_columns (for test compatibility)
+void Matrix::swap_cols(size_t col1, size_t col2) {
+    // use existing swap_columns function
+    swap_columns(col1, col2);
+}
