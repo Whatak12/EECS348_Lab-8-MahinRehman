@@ -1,5 +1,6 @@
 // include the header file for the Matrix class
 #include "matrix.hpp"
+#include <iomanip>
 
 // use the standard namespace
 using namespace std;
