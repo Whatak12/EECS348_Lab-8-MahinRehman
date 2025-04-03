@@ -39,11 +39,34 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    // read first matrix from file
-    Matrix A(input);
+    // read matrix size once
+    size_t N;
+    input >> N;
 
-    // read second matrix from file
-    Matrix B(input);
+    // create matrix A
+    Matrix A(N);
+
+    // fill matrix A with values
+    for (size_t i = 0; i < N; ++i) {
+        for (size_t j = 0; j < N; ++j) {
+            int val;
+            input >> val;
+            A.update_element(i, j, val);
+        }
+    }
+
+    // create matrix B
+    Matrix B(N);
+
+    // fill matrix B with values
+    for (size_t i = 0; i < N; ++i) {
+        for (size_t j = 0; j < N; ++j) {
+            int val;
+            input >> val;
+            B.update_element(i, j, val);
+        }
+    }
+
 
     // print the first matrix
     cout << "Matrix A:" << endl;

@@ -23,7 +23,10 @@ Matrix::Matrix(size_t N) {
 // constructor that reads matrix data from a file stream
 Matrix::Matrix(ifstream &input) {
     // read the matrix size from the file
-    input >> size;
+    if (size == 0) {
+        input >> size;
+    }
+    
 
     // resize the matrix to N rows
     data.resize(size);
