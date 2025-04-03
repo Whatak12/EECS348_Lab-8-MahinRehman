@@ -124,7 +124,7 @@ int Matrix::diagonal_sum() const {
         sum += data[i][size - i - 1];
     }
 
-    //if matrix has odd size, subtract the center (it got added twice)
+    //if matrix has odd size, subtract the center 
     if (size % 2 == 1) {
         //subtract the middle element once
         sum -= data[size / 2][size / 2];
@@ -248,7 +248,7 @@ int Matrix::sum_diagonal_minor() const {
 
     //loop through minor diagonal
     for (size_t i = 0; i < size; ++i) {
-        //add diagonal element from top-right to bottom-left
+        //add diagonal element from top-right to bottom left
         sum += data[i][size - 1 - i];
     }
 
@@ -256,7 +256,7 @@ int Matrix::sum_diagonal_minor() const {
     return sum;
 }
 
-//alias for swap_columns (for test compatibility)
+//alias for swap_columns 
 void Matrix::swap_cols(size_t col1, size_t col2) {
     //use existing swap_columns function
     swap_columns(col1, col2);

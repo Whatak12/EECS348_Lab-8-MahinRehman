@@ -12,10 +12,10 @@ Creation date: 04/02/2025
 //include the header file for the Matrix class
 #include "matrix.hpp"
 
-//include standard library for command-line arguments
+//include standard library for command line arguments
 #include <cstdlib>
 
-//include standard input/output stream
+//include standard input and output stream
 #include <iostream>
 
 //include file stream for reading matrix data
