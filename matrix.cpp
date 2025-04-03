@@ -163,3 +163,65 @@ void Matrix::update_element(size_t row, size_t col, int value) {
         data[row][col] = value;
     }
 }
+
+// construct matrix from a 2D vector
+Matrix::Matrix(const std::vector<std::vector<int>>& input) {
+    // set the matrix size to the number of rows
+    size = input.size();
+
+    // assign the input data to the matrix
+    data = input;
+}
+
+// get the value at a specific position in the matrix
+int Matrix::get_value(size_t row, size_t col) const {
+    // return the value at the given row and column
+    return data.at(row).at(col);
+}
+
+// set the value at a specific position in the matrix
+void Matrix::set_value(size_t row, size_t col, int value) {
+    // set the value at the specified row and column
+    data.at(row).at(col) = value;
+}
+
+// return the size of the matrix
+size_t Matrix::get_size() const {
+    // return the number of rows or columns
+    return size;
+}
+
+// overload + operator to add two matrices
+Matrix Matrix::operator+(const Matrix& other) const {
+    // create a new matrix with the same size
+    Matrix result(size);
+
+    // add corresponding elements
+    for (size_t i = 0; i < size; ++i) {
+        for (size_t j = 0; j < size; ++j) {
+            result.data[i][j] = data[i][j] + other.data[i][j];
+        }
+    }
+
+    // return the result matrix
+    return result;
+}
+
+// overload * operator to multiply two matrices
+Matrix Matrix::operator*(const Matrix& other) const {
+    // create a new matrix with the same size
+    Matrix result(size);
+
+    // perform matrix multiplication
+    for (size_t i = 0; i < size; ++i) {
+        for (size_t j = 0; j < size; ++j) {
+            result.data[i][j] = 0;
+            for (size_t k = 0; k < size; ++k) {
+                result.data[i][j] += data[i][k] * other.data[k][j];
+            }
+        }
+    }
+
+    // return the result matrix
+    return result;
+}

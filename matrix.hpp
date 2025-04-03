@@ -61,6 +61,25 @@ public:
 
     // function to update a specific cell
     void update_element(size_t row, size_t col, int value);
+
+    // construct matrix from 2D vector
+    Matrix(const std::vector<std::vector<int>>& input);
+
+    // get value at specific cell
+    int get_value(size_t row, size_t col) const;
+
+    // set value at specific cell
+    void set_value(size_t row, size_t col, int value);
+
+    // return matrix size
+    size_t get_size() const;
+
+    // overload + operator for matrix addition
+    Matrix operator+(const Matrix& other) const;
+
+    // overload * operator for matrix multiplication
+    Matrix operator*(const Matrix& other) const;
+
 };
 
 #endif
