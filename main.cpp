@@ -1,3 +1,14 @@
+/*
+Name: EECS 348 Lab 8
+Description: Driver program to read matrices and test matrix operations
+Inputs: Test file labeled input.txt
+Outputs: Matrix operations results
+Collaborators: ChatGpt
+Other sources: ChatGpt
+Author: Mahin Rehman
+Creation date: 04/02/2025
+*/
+
 // include the header file for the Matrix class
 #include "matrix.hpp"
 

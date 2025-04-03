@@ -1,3 +1,13 @@
+/*
+Name: EECS 348 Lab 8
+Description: Declaration of the Matrix class and its operations
+Inputs: Test file labeled input.txt
+Outputs: Matrix operations results
+Collaborators: ChatGpt
+Other sources: ChatGpt
+Author: Mahin Rehman
+Creation date: 04/02/2025
+*/
 #ifndef __MATRIX_HPP__
 #define __MATRIX_HPP__
 
